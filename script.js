@@ -321,7 +321,7 @@ const toggleBackgroundButton = document.getElementById("toggleBackground");
 const videoContainer = document.querySelector(".video-container");
 const videoContainerNight = document.querySelector(".video-container-night");
 const sunImage = "assets/pictures/Moon.png"; // Path to Sun image (relative to the HTML file)
-const moonImage = "assets/pictures/Day.png"; // Path to Moon image (relative to the HTML file)
+const moonImage = "assets/pictures/day.png"; // Path to Moon image (relative to the HTML file)
 
 // Check the initial background state and set the button content accordingly
 let isDaytime = videoContainer.style.display !== "none";
