@@ -20,7 +20,7 @@
   --search-bg: #14162b;
   --overlay-bg: rgba(36, 39, 59, 0.3);
   --scrollbar-bg: rgb(1 2 3 / 40%);
-  --background-image: src('/assets/pic/night1.png');
+  --background-image: src('assets/pic/night1.png');
   --side-bg:rgba(25, 2, 15, 0.4);
   --arrow-bg: rgb(113 119 144 / 78%);
 }
@@ -39,7 +39,7 @@
   --hover-menu-bg: rgba(255 255 255 / 35%);
   --scrollbar-bg: rgb(255 253 253 / 57%);
   --content-title-color: --theme-color;
-  --background-image: url('./assets/pic/day.png');
+  --background-image: url('assets/pic/day.png');
   --side-bg:rgba(253, 181, 86, 0.31);
   --arrow-bg: rgb(113 119 144 / 78%);
 }
@@ -84,9 +84,11 @@ body {
 
 
 .light-mode.static-day {
-  background-image: url('/assets/pic/day.png');
+  background-image: url('assets/pic/day.png');
 }
-
+.dark-mode.static-day {
+  background-image: url('assets/pic/night1.png');
+}
 .container {
   position: relative;
   width: 100%;
