@@ -466,6 +466,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       parseMarkdown(markdown); // Call parseMarkdown with the fetched content
       populateSideMenu(); // Call this right after to ensure 'categories' is ready
       populateMainHeader("Oracle's Cove");
+      populateFromMarkdown(); // Call this to populate entries from Markdown
 
     })
     .catch((error) => console.error("Failed to fetch links.md:", error)); // Log errors, if any
@@ -599,6 +600,7 @@ function populateMainHeader(selectedCategoryTitle, selectedSubCategoryTitle = nu
 
     
   
+    
     // Populate subcategories
 
 
@@ -774,5 +776,97 @@ function displayStaticContent(categoryName, subCategoryName = null) {
   } else if (categoryName === "Oracle's Cove" && subCategoryName === "Before you Sail") {
       document.getElementById('Before you Sail').style.display = 'flex';
       document.getElementById('FAQ').style.display = 'none';
+  }
+}
+
+
+
+function populateEntries() {
+    // Traverse through categories and their nested structures
+    categories.forEach((category) => {
+        category.subCategories.forEach((subCategory) => {
+            subCategory.subSubCategories.forEach((subSubCategory) => {
+                subSubCategory.items.forEach((item) => {
+                    createListEntry(item);
+                    createCardEntry(item);
+                });
+            });
+            if (subCategory.items) {
+                subCategory.items.forEach((item) => {
+                    createListEntry(item);
+                    createCardEntry(item);
+                });
+            }
+        });
+        if (category.items) {
+            category.items.forEach((item) => {
+                createListEntry(item);
+                createCardEntry(item);
+            });
+        }
+    });
+}
+
+
+function populateFromMarkdown() {
+  // Clear previous entries
+  const ul = document.querySelector(".content-section ul") || document.createElement("ul");
+  const tilesContainer = document.getElementById("Tiles");
+  ul.innerHTML = ''; // Reset the list
+  tilesContainer.innerHTML = ''; // Reset the tiles
+
+  // Ensure containers are properly attached
+  if (!document.querySelector(".content-section ul")) {
+      document.querySelector(".content-section").appendChild(ul);
+  }
+
+  // Iterate through all items in all categories
+  categories.forEach(category => {
+      category.subCategories.forEach(subCategory => {
+          (subCategory.subSubCategories || []).forEach(subSubCategory => {
+              subSubCategory.items.forEach(item => createEntries(item));
+          });
+          if (subCategory.items) {
+              subCategory.items.forEach(item => createEntries(item));
+          }
+      });
+      if (category.items) {
+          category.items.forEach(item => createEntries(item));
+      }
+  });
+
+  function createEntries(item) {
+      // Create list entry
+      var listEntry = document.createElement("li");
+      listEntry.classList.add("list-website");
+      listEntry.innerHTML = `
+          <div class="website-list">
+              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}">
+              ${item.name}
+          </div>
+          <div class="button-wrapper">
+              <button class="nfo-button status-button open">.nfo</button>
+              <div class="nfo-content">${item.info}</div>
+          </div>
+          <div class="buttonHolder">
+              <button class="starbutton ${item.starred ? 'starred' : ''}"></button>
+          </div>
+      `;
+      ul.appendChild(listEntry);
+
+      // Create card entry
+      var cardEntry = document.createElement("div");
+      cardEntry.classList.add("app-card");
+      cardEntry.innerHTML = `
+          <span>
+              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}">
+              <div class="text-center">${item.name}</div>
+              <div class="buttonHolder">
+                  <button class="starbutton2 ${item.starred ? 'starred' : ''}"></button>
+              </div>
+          </span>
+          <div class="app-card__subtext">${item.info}</div>
+      `;
+      tilesContainer.appendChild(cardEntry);
   }
 }
