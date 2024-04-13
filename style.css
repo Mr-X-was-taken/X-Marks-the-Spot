@@ -20,11 +20,7 @@
   --search-bg: #14162b;
   --overlay-bg: rgba(36, 39, 59, 0.3);
   --scrollbar-bg: rgb(1 2 3 / 40%);
-<<<<<<< Updated upstream
-  --background-image: src('assets/pic/night1.png');
-=======
   --background-image: url('assets/pic/night1.png');
->>>>>>> Stashed changes
   --side-bg:rgba(25, 2, 15, 0.4);
   --arrow-bg: rgb(113 119 144 / 78%);
 }
@@ -84,12 +80,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
 .container {
   position: relative;
   width: 100%;
