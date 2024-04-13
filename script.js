@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     customButton.classList.toggle("invert-filter");
     customButton2.classList.toggle("invert-filter");
-    side - title.classList.toggle("invert-filter");
   });
 });
 document.addEventListener("DOMContentLoaded", (event) => {
