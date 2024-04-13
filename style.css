@@ -39,7 +39,7 @@
   --hover-menu-bg: rgba(255 255 255 / 35%);
   --scrollbar-bg: rgb(255 253 253 / 57%);
   --content-title-color: --theme-color;
-  --background-image: src('/assets/pic/day.png');
+  --background-image: src('./assets/pic/day.png');
   --side-bg:rgba(253, 181, 86, 0.31);
   --arrow-bg: rgb(113 119 144 / 78%);
 }
