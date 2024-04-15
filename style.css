@@ -185,7 +185,7 @@ body.light-mode:before {
 .header {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+
   height: 58px;
   width: 100%;
   border-bottom: 1px solid var(--border-color);
@@ -246,7 +246,7 @@ body.light-mode:before {
   border-radius: 50%;
   box-shadow: 24px 0 0 0 #f8ce52, 48px 0 0 0 #5fcf65;
   margin-right: 195px;
-  flex-shrink: 0;
+
 }
 @media screen and (max-width: 945px) {
   .menu-circle {
@@ -304,12 +304,12 @@ body.light-mode:before {
   align-items: center;
   padding: 0 16px 0 40px;
   margin-left: auto;
-  flex-shrink: 0;
+
 }
 .header-profile svg {
   width: 22px;
   color: #f9fafb;
-  flex-shrink: 0;
+
 }
 
 .notification {
@@ -388,6 +388,7 @@ body.light-mode:before {
   border-right: 1px solid var(--border-color);
   padding: 26px;
   overflow: scroll;
+  max-width: min-content;
 }
 
 .background-container {
@@ -505,7 +506,6 @@ body.light-mode:before {
   align-items: center;
   border-bottom: 1px solid var(--border-color);
   height: 58px;
-  flex-shrink: 0;
 }
 .sub-sub-category-menu {
 padding: 20px 24px;
@@ -532,7 +532,6 @@ a.sub-sub-header-link {
   align-items: center;
   border-bottom: 1px solid var(--border-color);
   height: 24px;
-  flex-shrink: 0;
   justify-content: center;
   white-space: nowrap;
   font-size: smaller;
@@ -727,8 +726,8 @@ a.sub-sub-header-link:hover {
   margin-top: 16px;
   cursor: pointer;
   transition: 0.3s;
-  white-space: nowrap;
 }
+
 .button.content-button:nth-child(2):hover{
   width: 60px;
   height: 20px;
@@ -854,7 +853,6 @@ a.sub-sub-header-link:hover {
   width: 28px;
   border-radius: 6px;
   margin-right: 16px;
-  flex-shrink: 0;
 }
 
 .website-list {
@@ -1056,7 +1054,6 @@ a.sub-sub-header-link:hover {
   border: 1px solid var(--theme-color);
   border-radius: 4px;
   cursor: pointer;
-  flex-shrink: 0;
 }
 
 .checkbox:checked + label:before {
@@ -1119,7 +1116,6 @@ a.sub-sub-header-link:hover {
   width: 28px;
   border-radius: 6px;
   margin-right: 12px;
-  flex-shrink: 0;
 }
 
 .app-card span {
@@ -1138,24 +1134,6 @@ a.sub-sub-header-link:hover {
   margin-left: auto;
   margin-top: 16px;
 }
-@media screen and (max-width: 1110px) {
-  .app-card {
-    width: calc(50% - 20px);
-  }
-  .app-card:last-child {
-    margin-top: 20px;
-    margin-left: 0px;
-  }
-}
-@media screen and (max-width: 565px) {
-  .app-card {
-    width: calc(100% - 20px);
-    margin-top: 20px;
-  }
-  .app-card + .app-card {
-    margin-left: 0;
-  }
-}
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -1169,13 +1147,15 @@ a.sub-sub-header-link:hover {
 
 .nfo-content {
   display: none;
-  transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+  transition: opacity 0.3s ease; 
   position: relative;
   left: 0;
-  width: 100%; /* Take full width of parent */
+  white-space: wrap;
+  margin-left: 10px;
+  flex-direction: column;
 }
 
-/* Add CSS for the name specifically, not affecting the image */
+
 .website-name {
   display: inline; /* Ensure the name is inline with the icon */
   transition: opacity 0.3s ease; /* Smooth transition for the opacity */
@@ -1189,8 +1169,9 @@ a.sub-sub-header-link:hover {
 
 /* Show the nfo-content on hover */
 .list-website:hover .nfo-content {
-  display: block;
+  display: flex;
   opacity: 1; /* Ensure it's visible */
+  flex-direction: column;
 }
 
 
