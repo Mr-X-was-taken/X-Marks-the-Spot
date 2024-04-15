@@ -381,22 +381,13 @@ body.light-mode:before {
 
 .wrapper {
   display: flex;
-  flex-grow: 1;
   overflow: hidden;
 }
 
 .left-side {
-  flex-basis: 240px;
   border-right: 1px solid var(--border-color);
   padding: 26px;
-  overflow: auto;
-  flex-shrink: 0;
-}
-
-@media screen and (max-width: 945px) {
-  .left-side {
-    display: none;
-  }
+  overflow: scroll;
 }
 
 .background-container {
@@ -599,7 +590,7 @@ a.sub-sub-header-link:hover {
   color: var(--theme-color);
   padding: 20px 40px;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
   background-color: var(--theme-bg-color);
 }
 @media screen and (max-width: 510px) {
@@ -869,7 +860,7 @@ a.sub-sub-header-link:hover {
 .website-list {
   display: flex;
   align-items: center;
-  width: 150px;
+  width: 0;
 }
 @media screen and (max-width: 480px) {
   .website-list {
@@ -1087,15 +1078,16 @@ a.sub-sub-header-link:hover {
 
 .apps-card {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  width: calc(100% + 20px);
+  width: 100%;
+  position: relative;
+  gap: 10px; /* This sets spacing between cards */
 }
 
 .app-card {
   display: flex;
   flex-direction: column;
-  width: calc(33.3% - 20px);
+  width: 32.5%;
   font-size: 16px;
   background-color: var(--content-bg);
   border-radius: 14px;
@@ -1104,20 +1096,32 @@ a.sub-sub-header-link:hover {
   cursor: pointer;
   transition: 0.3s ease;
   min-height: 140px;
+  max-height: 140px;
+  overflow: hidden;
+  position: relative; /* Added for positioning the pseudo-element */
 }
+
+
 .app-card:hover {
   transform: scale(1.02);
   background-color: var(--theme-bg-color);
+  max-height: none; /* Expanded state height */
+  overflow: visible;
+  z-index: 5; /* Bring to front on hover */
+  transition: transform 0.3s ease, z-index 0s, max-height 0.3s ease;
 }
+
+.starred {
+  background-color: rgba(255, 217, 0, 0.356); /* Example style */
+}
+
 .app-card svg {
   width: 28px;
   border-radius: 6px;
   margin-right: 12px;
   flex-shrink: 0;
 }
-.app-card + .app-card {
-  margin-left: 20px;
-}
+
 .app-card span {
   display: flex;
   align-items: center;
@@ -1163,37 +1167,32 @@ a.sub-sub-header-link:hover {
   border-radius: 10px;
 }
 
-/* Initially hide the NFO content */
 .nfo-content {
   display: none;
+  transition: opacity 0.3s ease; /* Smooth transition for the opacity */
   position: relative;
-  color: var(--theme-color);
-  z-index: 1;
-  top: 0px; 
-  transform: translateX(-10%); 
-  justify-self: flex-end;
+  left: 0;
+  width: 100%; /* Take full width of parent */
 }
 
-/* Style for the "nfo" button */
-.button-wrapper:hover {
-  cursor: pointer;
+/* Add CSS for the name specifically, not affecting the image */
+.website-name {
+  display: inline; /* Ensure the name is inline with the icon */
+  transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+  margin-left: 10px;
 }
 
-/* Change the background color of the "nfo" button on hover */
-.nfo-button:hover {
-  background-color: #f1c232; /* Change to your desired color */
+/* Hide the website name (not the icon) on hover */
+.list-website:hover .website-name {
+  opacity: 0; /* Make the name transparent on hover */
 }
 
-/* Show the NFO content when hovering over the button wrapper */
-.button-wrapper:hover .nfo-content {
+/* Show the nfo-content on hover */
+.list-website:hover .nfo-content {
   display: block;
-  font-size: 12px;
+  opacity: 1; /* Ensure it's visible */
 }
 
-.button-wrapper:hover .nfo-button {
-  opacity: 0;
-  transition: opacity 0s; /* Set the transition duration to 0 seconds */
-}
 
 
 /*fucking Favorite button */
@@ -1530,3 +1529,29 @@ a.sub-sub-header-link:hover {
 #FAQ{
   display: none;
 }
+
+.fa-pen-to-square{
+  position: relative;
+  top: -10px;
+  left: -10px;
+  margin-right: -10px;
+}
+
+.fa-trash{
+  position: relative;
+  top: -10px;
+  right: -10px;
+  margin-left: -10px;
+}
+
+button.fa-regular{
+ background: none;
+ border: none;
+}
+
+button.fa-solid{
+  background: none;
+  border: none;
+ }
+
+ 

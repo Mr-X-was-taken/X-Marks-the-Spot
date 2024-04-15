@@ -360,31 +360,53 @@ var video = document.getElementById("Clouds");
 video.playbackRate = 0.4;
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the checkbox
-  var checkbox = document.getElementById("check1");
+  // Get the checkboxes
+  var checkbox1 = document.getElementById("check1");
+  var checkbox2 = document.getElementById("check2");
+  var checkbox3 = document.getElementById("check3");
 
-  // Get the divs to show/hide
+  // Get the divs to show/hide for each checkbox using querySelectorAll
   var videoBg = document.querySelector(".video-bg");
   var staticDay = document.querySelector(".static-day");
+  var controlbuttons = document.querySelectorAll(".dark-light, .buttons-anchor, .buttons-binocular");
+  var edits = document.querySelectorAll(".fa-pen-to-square, .fa-trash");
 
-  // Initially hide the staticDay div
-  staticDay.style.display = "none";
+  // Function to toggle visibility for multiple elements
+  function toggleVisibility(checkbox, elements, showWhenChecked) {
+    elements.forEach(function(element) {
+      element.style.display = checkbox.checked ? (showWhenChecked ? "flex" : "none") : (showWhenChecked ? "none" : "flex");
+    });
+  }
 
-  // Listen for changes on the checkbox
-  checkbox.addEventListener("change", function () {
-    // Check if the checkbox is checked
+  // Function for checkbox 1 which also needs to hide another element
+  function toggleDisplayComplex(checkbox, elementToShow, elementToHide) {
     if (checkbox.checked) {
-      // If checked, hide the video and show the static image
-      videoBg.style.display = "none";
-      staticDay.style.display = "flex"; // Adjust as needed (e.g., 'block', 'flex')
+      elementToShow.style.display = "flex";
+      elementToHide.style.display = "none";
     } else {
-      // If unchecked, show the video and hide the static image
-      videoBg.style.display = "";
-      staticDay.style.display = "none";
+      elementToShow.style.display = "none";
+      elementToHide.style.display = ""; // Revert to default
     }
+  }
+
+  // Initialize visibility based on checkboxes' states on DOM load
+  toggleDisplayComplex(checkbox1, staticDay, videoBg);
+  toggleVisibility(checkbox2, controlbuttons, false); // Control buttons are shown when unchecked
+  toggleVisibility(checkbox3, edits, true); // Edits are shown when checked
+
+  // Listen for changes on each checkbox
+  checkbox1.addEventListener("change", function () {
+    toggleDisplayComplex(checkbox1, staticDay, videoBg);
+  });
+  
+  checkbox2.addEventListener("change", function () {
+    toggleVisibility(checkbox2, controlbuttons, false);
+  });
+
+  checkbox3.addEventListener("change", function () {
+    toggleVisibility(checkbox3, edits, true);
   });
 });
-
 
 
 
@@ -811,9 +833,9 @@ function populateEntries() {
 function populateFromMarkdown() {
   // Clear previous entries
   const ul = document.querySelector(".content-section ul") || document.createElement("ul");
-  const tilesContainer = document.getElementById("Tiles");
-  ul.innerHTML = ''; // Reset the list
-  tilesContainer.innerHTML = ''; // Reset the tiles
+  const tilesContainer = document.getElementById("Tiles2");
+  //ul.innerHTML = ''; // Reset the list
+  //tilesContainer.innerHTML = ''; // Reset the tiles
 
   // Ensure containers are properly attached
   if (!document.querySelector(".content-section ul")) {
@@ -838,35 +860,47 @@ function populateFromMarkdown() {
   function createEntries(item) {
       // Create list entry
       var listEntry = document.createElement("li");
+      if (item.starred) {
+        listEntry.classList.add("list-website", "starred");
+    } else {
       listEntry.classList.add("list-website");
+    }
       listEntry.innerHTML = `
           <div class="website-list">
-              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}">
-              ${item.name}
+              <button class="fa-regular fa-pen-to-square" style="color: #009595;"></button>
+              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}"style="min-width: 32px;">
+              <span class="website-name">${item.name}</span>
           </div>
           <div class="button-wrapper">
-              <button class="nfo-button status-button open">.nfo</button>
               <div class="nfo-content">${item.info}</div>
           </div>
           <div class="buttonHolder">
-              <button class="starbutton ${item.starred ? 'starred' : ''}"></button>
+              <button class="starbutton"></button>
           </div>
+          <button class="fa-solid fa-trash" style="color: #800000;"></button>
       `;
       ul.appendChild(listEntry);
 
       // Create card entry
       var cardEntry = document.createElement("div");
-      cardEntry.classList.add("app-card");
+      if (item.starred) {
+        cardEntry.classList.add("app-card", "starred");
+    } else {
+        cardEntry.classList.add("app-card");
+    }
       cardEntry.innerHTML = `
           <span>
-              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}">
+              <button class="fa-regular fa-pen-to-square" style="color: #009595;"></button>
+              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}"style="min-width: 32px;">
               <div class="text-center">${item.name}</div>
               <div class="buttonHolder">
-                  <button class="starbutton2 ${item.starred ? 'starred' : ''}"></button>
+                  <button class="starbutton2"></button>
               </div>
+              <button class="fa-solid fa-trash" style="color: #800000;"></button>
           </span>
           <div class="app-card__subtext">${item.info}</div>
       `;
       tilesContainer.appendChild(cardEntry);
   }
 }
+
