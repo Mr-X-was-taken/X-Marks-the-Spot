@@ -39,13 +39,13 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-$(".search-bar input")
+/* $(".search-bar input")
   .focus(function () {
     $(".header").addClass("wide");
   })
   .blur(function () {
     $(".header").removeClass("wide");
-  });
+  }); */
 
 $(document).click(function (e) {
   var container = $(".status-button");
@@ -154,18 +154,19 @@ function addEntry() {
     var listEntry = document.createElement("li");
     listEntry.classList.add("list-website");
     listEntry.innerHTML = `
-      <div class="website-list">
-        <img src="https://www.google.com/s2/favicons?sz=32&domain=${link}" alt="${link}">
-        ${name}
-      </div>
-      <div class="button-wrapper">
-        <button class="nfo-button status-button open">.nfo</button>
+    <div class="website-list">
+        <button class="fa-regular fa-pen-to-square" style="color: #009595;"></button>
+        <img src="https://www.google.com/s2/favicons?sz=32&domain=${link}" alt="${link}"style="min-width: 32px;">
+        <span class="website-name">${name}</span>
+    </div>
+    <div class="button-wrapper">
         <div class="nfo-content">${nfo}</div>
-      </div>
-      <div class="buttonHolder">
+    </div>
+    <div class="buttonHolder">
         <button class="starbutton"></button>
-      </div>
-    `;
+    </div>
+    <button class="fa-solid fa-trash" style="color: #800000;"></button>
+`;
 
     // Get or create the ul element
     var ul = document.querySelector(".content-section ul");
@@ -182,16 +183,20 @@ function addEntry() {
   cardEntry.classList.add("app-card");
   cardEntry.innerHTML = `
   <span>
-    <img src="https://www.google.com/s2/favicons?sz=32&domain=${link}" alt="${link}">
-    <div class="text-center">${name}</div>
-    <div class="buttonHolder">
-      <button class="starbutton2"></button>
-    </div>
+      <button class="fa-regular fa-pen-to-square" style="color: #009595;"></button>
+      <img src="https://www.google.com/s2/favicons?sz=32&domain=${link}" alt="${link}"style="min-width: 32px;">
+      <div class="text-center">${name}</div>
+      <div class="buttonHolder">
+          <button class="starbutton2"></button>
+      </div>
+      <button class="fa-solid fa-trash" style="color: #800000;"></button>
   </span>
   <div class="app-card__subtext">${nfo}</div>
 `;
   document.getElementById("Tiles").appendChild(cardEntry);
 }
+
+
 }
 //tiles or list?
 
