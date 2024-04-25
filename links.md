@@ -129,9 +129,19 @@
 
 ## VPNs
 
+((Intro))
+A **VPN**, or *Virtual Private Network*, is a technology that creates a secure and encrypted connection over a less secure network, such as the internet. It allows users to send and receive data across shared or public networks as if their computing devices were directly connected to a private network. The benefits of a VPN include:
+
+- **Enhanced Security:** Encrypts the internet connection to protect data from hackers and eavesdroppers.
+- **Privacy and Anonymity:** Masks the user's IP address, making their online actions virtually untraceable.
+- **Access Restricted Content:** Enables access to geo-restricted websites and services by simulating a connection from different locations.
+
+VPNs are commonly used by businesses to protect sensitive data and by individuals to maintain online privacy and access content with geographic restrictions.
+((Intro))
+
 ### VPN Guides and Tutorials
 
-- [/r/VPN](https://www.reddit.com/r/VPN/) VPN Subreddit. Also, check the [FAQ](https://www.reddit.com/r/vpn/wiki/faq/) and [Comparison Table](https://docs.google.com/spreadsheets/d/1ijfqfLrJWLUVBfJZ_YalVpstWsjw-JGzkvMd6u2jqEk/edit#gid=231869418).
+- [/r/VPN](https://www.reddit.com/r/VPN/) VPN Subreddit. Also, check the FAQ and Comparison Table on the right side.
 - [Choosing the VPN That's Right for You](https://ssd.eff.org/module/choosing-vpn-thats-right-you) Helpful guide from the EFF.
 - [Which VPN Providers Really Take Privacy Seriously?](https://torrentfreak.com/best-vpn-anonymous-no-logging/) TorrentFreak Article
 - [VPN over SSH](https://wiki.archlinux.org/title/VPN_over_SSH) ArchWiki page describing how to achieve a poor man's VPN with SSH tunneling
@@ -168,6 +178,16 @@
 
 ## Browser Extensions
 
+((Intro))
+A **browser extension** is a small software module for customizing a web browser. Extensions enable users to tailor browser functionality and behavior to individual needs or preferences. They are built on web technologies such as HTML, JavaScript, and CSS. The benefits of browser extensions include:
+
+- **Enhanced Functionality:** Add new features to the browser or enhance the functionality of web pages. Examples include ad-blocking, improved download managers, or integrating other software features.
+- **Customized User Experience:** Allow users to personalize the browsing experience, from changing the appearance of web pages to managing tab behavior, thus improving productivity and ease of use.
+- **Improved Accessibility:** Provide tools that help users with specific needs or preferences navigate the internet more easily, such as text-to-speech, enhanced contrast modes, or content reorganization.
+
+Browser extensions are widely used by individuals to increase productivity, secure browsing activities, and enhance the overall internet experience by adding functionalities that are not natively provided by browsers.
+((Intro))
+
 - [Decentraleyes](https://decentraleyes.org/) Protects against tracking with a local CDN (Content Delivery Network) emulation.
 - [Privacy Badger](https://privacybadger.org/) Automatically learns to block invisible trackers.
 - [uBlock Origin](https://github.com/gorhill/uBlock) !star2! An efficient blocker for Chromium and Firefox. Fast and lean.
@@ -183,6 +203,16 @@
 
 
 ## Userscripts
+
+((Intro))
+A **userscript** is a type of script written in JavaScript that runs in web browsers to enhance the functionality of websites by allowing users to modify web page behavior and content. These scripts operate on the client side and can be managed through userscript managers like Tampermonkey or Greasemonkey. The benefits of userscripts include:
+
+- **Customized Content:** Users can modify or enhance the content of a web page, such as adding new features, removing unwanted content, or automating repetitive tasks.
+- **Control Over User Interface:** Allows users to change the layout of web pages, improve navigation, and adapt the user interface to better suit their needs.
+- **Enhanced Browsing Efficiency:** Automate common tasks and streamline browsing activities, which can significantly speed up how users interact with various websites.
+
+Userscripts are popular among tech-savvy individuals who wish to personalize their browsing experience beyond what is available through standard browser extensions.
+((Intro))
 
 - [IMDb Scout](https://greasyfork.org/en/scripts/3967-imdb-scout) Add links from IMDb pages to torrent sites -- easy downloading from IMDb
 - [IMDb Scout Mod](https://greasyfork.org/en/scripts/407284-imdb-scout-mod) Adds links to IMDb pages from the torrent, ddl, subtitles, streaming, usenet and other sites.
@@ -202,6 +232,16 @@
 
 ## Password Vaults
 
+((Intro))
+A **password vault** is a secure digital storage tool that manages and stores various passwords, PINs, and other sensitive information. These vaults encrypt the user's password database with a master password – the master key to access all stored information. The benefits of password vaults include:
+
+- **Enhanced Security:** Offers a secure method to store and manage passwords, using strong encryption to protect sensitive information from unauthorized access.
+- **Convenience:** Automatically fills in passwords on websites and apps, reducing the burden of remembering multiple complex passwords and decreasing the risk of typing errors.
+- **Password Integrity:** Helps users generate and retrieve complex passwords, which enhances security by minimizing the reuse and predictability of passwords.
+
+Password vaults are essential for both individuals and businesses to maintain strong security practices and protect their digital assets from cyber threats.
+((Intro))
+
 - [BitWarden](https://bitwarden.com/) !star2! Open source password management solution, can be self-hosted
 - [1Password](https://1password.com/) Popular cloud-hosted password manager
 - [KeePass](https://keepass.info/) Free, open source, light-weight, and easy-to-use password manager.
@@ -220,8 +260,21 @@
 
 
 ## Antivirus
-**[otr: one-time-run]** No need for installation, just click & run. <br>
-**Warning:** Anti-virus and anti-spyware software may sometimes generate false positives. Consider quarantining suspicious files rather than deleting them specially, if you don't want to face any functionality breakage in any application.
+
+((Intro))
+An **antivirus** is a software program designed to detect, prevent, and remove malware, including viruses, worms, and Trojan horses. It scans the computer system for malicious activities and helps protect against cyber threats. The benefits of antivirus software include:
+
+- **Proactive Threat Prevention:** Provides real-time scanning and detection of malware threats to prevent potential damage to the computer or network.
+- **System Integrity and Data Protection:** Helps to safeguard personal and sensitive information from unauthorized access and cyber theft.
+- **Performance Maintenance:** Regular scans and removal of malware contribute to maintaining system performance and stability.
+
+**Additional Information:**
+- **OTR: One-Time-Run**: No need for installation, just click and run, making it ideal for immediate and temporary use.
+- **Warning:** Anti-virus and anti-spyware software may sometimes generate false positives. Consider quarantining suspicious files rather than deleting them, especially if you don't want to face any functionality breakage in any application.
+- **Multiple Antivirus Warning:** Do not run multiple antivirus programs concurrently as this can lead to system conflicts, decreased performance, and reduced effectiveness of the software.
+- **Note:** Certain malware components can only be removed in [Windows Safe Mode](https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234#WindowsVersion=Windows_11). Operating in Safe Mode can prevent malware from using certain hiding techniques, making it easier to remove.
+
+((Intro))
 
 - [Norton Power Eraser(NPE)](https://support.norton.com/sp/en/us/home/current/solutions/kb20100824120155EN) A tool good at repairing certain system files and functions(otr).
 - [Kaspersky Virus Removal Tool(kvrt)](https://www.kaspersky.com/downloads/free-virus-removal-tool) !star2! A tool for advanced scanning and disinfecting Windows computers(otr).
@@ -236,10 +289,18 @@
 - [Malwarebytes AdwCleaner](https://www.malwarebytes.com/adwcleaner) An adware cleaner for removing unwanted programs and junkware(otr).
 - [ESET Online Scanner](https://www.eset.com/in/home/online-scanner/) An otr scanner from ESET for Windows.
 
-**Note:** Certain malware components can only be removed in [Windows Safe Mode](https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234#WindowsVersion=Windows_11).
-
-
 ## Privacy
+
+((Intro))
+**Privacy Tools and Resources** are vital for protecting personal data and enhancing online anonymity in an era of pervasive digital surveillance. These resources encompass a broad range of services and guides designed to help individuals and organizations maintain privacy and secure their digital communications. The benefits include:
+
+- **Awareness and Education:** Provide comprehensive guides and tips on privacy best practices, helping users understand the risks and how to mitigate them.
+- **Tools and Services:** Offer access to a variety of software and services that prioritize user privacy, including secure messaging apps, privacy-focused browsers, and encrypted email services.
+- **Community Support:** Engage with communities that advocate for privacy rights and share insights about avoiding surveillance and data collection.
+
+The goal of these resources is to empower users to make informed decisions about their online presence, protect themselves from unauthorized data collection, and counteract global mass surveillance.
+
+((Intro))
 
 - [Awesome Privacy](https://github.com/pluja/awesome-privacy) List of free, open source and privacy respecting services and alternatives to privative services.
 - [PrivacyTools.io](https://www.privacytools.io/) Provides services, tools, and privacy guides to counter global mass surveillance.
@@ -267,6 +328,16 @@
 
 ## Decentralised Networks
 
+((Intro))
+**Decentralized Networks** refer to systems in which the components operate on a peer-to-peer basis without a central authority. These networks harness the power of multiple individual nodes to perform tasks and store data, enhancing resilience and reducing the risk of single points of failure. The benefits of decentralized networks include:
+
+- **Enhanced Privacy:** By distributing data across numerous nodes, decentralized networks help protect user data from surveillance and control by central entities.
+- **Increased Resilience:** These networks are less susceptible to server failures or targeted attacks that typically affect centralized systems, ensuring greater uptime and reliability.
+- **Democratic Control:** Decentralized networks often employ consensus methods that give participants equal rights in decision-making processes, fostering a more democratic governance structure.
+
+Decentralized networks are particularly prominent in technologies such as blockchain and distributed ledgers, and are increasingly being adopted for applications like social media, content distribution, and more, aiming to create more open, transparent, and user-empowered platforms.
+((Intro))
+
 - [Tor](https://www.torproject.org/) !star2! Tor is free software and an open network that helps you defend against traffic analysis.
 - [I2P](https://geti2p.net/en/) I2P is an anonymous overlay network - a network within a network. It is intended to protect communication from dragnet surveillance and monitoring by third parties such as ISPs.
 - [Freenet](https://freenetproject.org) Freenet is free software which lets you anonymously share files, browse and publish "freesites" (web sites accessible only through Freenet) and chat on forums, without fear of censorship.
@@ -278,11 +349,31 @@
 
 ## Operating Systems
 
+((Intro))
+**Operating Systems (OS)** are the fundamental software that manage the hardware and software resources of a computer. They provide a stable and consistent environment for other software to execute commands and perform tasks. Key functions and benefits of operating systems include:
+
+- **Resource Management:** Efficiently manage the computer's hardware resources, such as the CPU, memory, disk space, and peripheral devices, to ensure optimal performance.
+- **User Interface:** Provide a user-friendly interface, whether graphical (GUI) or command-line (CLI), enabling users to interact effectively with the computer system.
+- **Software Compatibility:** Serve as a platform for application software, ensuring compatibility and facilitating the execution of a wide range of programs.
+
+Operating systems vary widely in design and functionality, catering to different types of devices from desktop computers and mobile devices to servers and embedded systems. Popular examples include Windows, macO
+
+((Intro))
 - [Qubes OS](https://www.qubes-os.org/) Qubes OS is a security-oriented operating system
 - [Tails](https://tails.boum.org/) Tails is a live operating system that you can start on almost any computer from a USB stick or a DVD.
 
 
 ## Domain Names
+
+((Intro))
+**Domain Names** are the readable addresses used to access websites on the internet, replacing the numerical IP addresses with user-friendly names. These names serve as a critical part of the global DNS (Domain Name System), which helps users find and navigate websites easily. Key features and benefits of domain names include:
+
+- **Brand Identity:** Domain names provide a unique identity on the internet, often reflecting the name of a business or a personal brand, which is vital for marketing and building a professional image.
+- **Ease of Use:** They make it easier for internet users to remember and type website addresses, compared to numerical IP addresses.
+- **Navigation and SEO:** Good domain names improve user experience and can benefit search engine optimization, helping websites to rank better in search results.
+
+Domain names are categorized into different levels, including top-level domains (TLDs) like `.com`, `.org`, `.net`, and country-specific TLDs like `.uk`, `.de`, `.ca`. Each domain name is unique and must be registered before it can be used.
+((Intro))
 
 - [Njalla](https://njal.la/) a privacy-aware domain registration service
 - [xip.io](http://xip.io/) magic domain name that provides wildcard DNS
@@ -291,6 +382,25 @@ for any IP address.
 
 
 ## Torrenting
+
+((Intro))
+**Torrenting** is a popular method of file sharing that uses the BitTorrent protocol to distribute data across a decentralized network of computers. This section provides a thorough overview of various aspects related to torrenting, including:
+
+- **Trackers and Tracker Types:** 
+  - **Public Trackers:** Accessible to any user without registration, often less secure and heavily monitored.
+  - **Private Trackers:** Require registration and often an invitation to join, offering better speeds, security, and quality content.
+  - **Semi-Private Trackers:** A mix of open and controlled access, providing a balance between security and availability.
+  - **Tracker Aggregators, Proxies, and Invites:** Tools and methods to manage or bypass tracker access restrictions and enhance connectivity.
+- **Torrent Clients:** Software like Deluge, rTorrent, and WebTorrent clients that facilitate the downloading and uploading of files.
+- **Seedboxes and Related Tools:**
+  - **Seedboxes:** Dedicated servers used for high-speed torrent transfers, often coupled with tools and guides for optimal setup.
+  - **Web-based Cloud Seedboxes and Hosting Providers:** Services that offer remote torrent download capabilities and storage.
+  - **Tracker Frameworks:** Backend systems that help in creating and managing torrent trackers.
+
+A **tracker** is a server that helps in the coordination of peer-to-peer file sharing using the BitTorrent protocol. Trackers serve as a crucial part of the torrent ecosystem by facilitating the connection between users (peers) who download and upload files. 
+Torrenting allows efficient distribution of large files but comes with legal and ethical considerations. Downloading copyrighted material without authorization is illegal in many countries, and practices vary with local laws. It is essential to use security measures, such as VPNs, to maintain privacy and minimize risks associated with torrenting.
+((Intro))
+
 
 - [/r/torrents](https://www.reddit.com/r/torrents) Questions and discussion about all things torrent-related
 - [BitTorrent](https://en.wikipedia.org/wiki/BitTorrent) Wikipedia's article on the BitTorrent file sharing protocol
@@ -551,6 +661,17 @@ ltConfig is a plugin for Deluge that allows direct modification to libtorrent se
 
 ## Usenet
 
+((Intro))
+**Usenet** is a decentralized network, one of the oldest computer network communications systems still in widespread use. It was developed in 1980 and is organized into categories known as newsgroups, which cover a vast range of topics. Usenet is used primarily for discussions and for sharing content like media files and software. Here's an overview of the main aspects of Usenet:
+
+- **Newsgroups:** These are discussion groups that are similar to forums. Each newsgroup is dedicated to a specific topic, and there are thousands of newsgroups covering a variety of interests.
+- **Binary Files:** Usenet is also used for distributing large binary files, split into multiple parts. It is a popular method for downloading large files quickly and efficiently due to its high-speed data transfer capabilities.
+- **Privacy and Security:** While Usenet itself offers minimal privacy, users can increase their security through the use of VPNs and SSL connections. This helps in protecting one's download activities from prying eyes.
+- **Access and Providers:** Access to Usenet requires a subscription with a Usenet provider. These providers often offer additional features such as built-in search engines and file previews.
+
+Usenet's structure and speed have made it a valuable resource for both discussion and file distribution, catering to users seeking an alternative to more traditional P2P file-sharing methods.
+((Intro))
+
 - [Usenet](https://en.wikipedia.org/wiki/Usenet) Usenet is a worldwide distributed discussion system available on computers.
 - [Usenet newsgroup](https://en.wikipedia.org/wiki/Usenet_newsgroup) A Usenet newsgroup is a repository usually within the Usenet system, for messages posted from many users in different locations using the Internet.
 - [/r/Usenet](https://www.reddit.com/r/Usenet) !star2! a thriving community dedicated to helping users old and new understand and use Usenet.
@@ -619,6 +740,17 @@ ltConfig is a plugin for Deluge that allows direct modification to libtorrent se
 
 
 ## Direct Downloads
+
+((Intro))
+**Direct Downloads** refer to the method of downloading files directly from a server using a web browser or a dedicated download manager. Unlike peer-to-peer (P2P) methods such as torrenting, direct downloads do not require sharing files with other users, which offers distinct advantages in terms of privacy and legal safety. Here's an overview of direct downloads:
+
+- **Simplicity and Convenience:** Users can download files directly through their web browsers or with download managers, which often support features like pause, resume, and acceleration of downloads.
+- **Increased Privacy and Safety:** Direct downloads are generally considered safer than torrenting in terms of avoiding legal issues. Since direct downloads do not involve sharing parts of files with others, it reduces the risk of getting caught significant.
+- **Reliability:** Files come from a single source rather than multiple peers, which can provide more stability and dependability in the availability and speed of downloads.
+- **Control Over Content:** Publishers and creators have more control over their content, as they can provide files directly to users without the complexities and security risks associated with P2P networks.
+
+Direct downloads are particularly popular for their ease of use and lower risk profile, especially in regions with stringent copyright enforcement policies like Germany.
+((Intro))
 
 ### Download Managers
 
@@ -768,12 +900,20 @@ premium services
 - [OpenDirectoryDownloader](https://github.com/KoalaBear84/OpenDirectoryDownloader) Indexes open directories
 
 
-### Streaming Sites
+## Streaming Sites
+((Intro))
+**Streaming Sites** refer to online platforms that deliver video and audio content directly to users over the internet in real-time, without the need for downloading the entire file. These sites have become a popular way to access a wide range of entertainment and informational content, including movies, TV shows, music, and live events. Here are the main aspects of streaming sites:
 
-- [How To Stream Movies, TV, Anime & Sports Online](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/index) !star2! Huge list by /u/nbatman
+- **Instant Access:** Users can view or listen to content immediately, without the wait times associated with downloading large files.
+- **Convenience:** Streaming sites are accessible on a variety of devices, including smartphones, tablets, computers, and smart TVs, making it easy to enjoy content at home or on the go.
+- **Diverse Content Library:** Many streaming platforms offer vast libraries of content across different genres and languages, often curated to suit various tastes and preferences.
+
+Streaming sites have revolutionized the way people consume media by making it more accessible and convenient, thereby shaping the future of entertainment consumption.
+((Intro))
 
 
-#### HD Streaming
+
+### HD Streaming
 
 - [Best Free Streaming](https://www.bestfreestreaming.org/) A site that rates streaming services.
 - [M4UFree.tv](https://ww1.m4ufree.tv/) Unique design, HD server with backup and additional hosts
@@ -795,8 +935,9 @@ premium services
 - [Mp4Hydra](https://mp4hydra.org) Unique design, HD server with additional hosts.
 
 
-#### Big Media Libraries
+### Big Media Libraries
 
+- [How To Stream Movies, TV, Anime & Sports Online](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/index) !star2! Huge list by /u/nbatman
 - [Streaming Multireddit](https://www.reddit.com/user/nbatman/m/streaming/) Reddit with all types of Streaming Links
 - [5Movies](http://5movies.to/) Large collection dating as far back as 1990
 - [2TwoMovies](https://two-movies.net/) Large collection dating as far back as 1895
@@ -807,13 +948,13 @@ premium services
 - [WorldSrc](https://worldsrc.org) Movies, software, apps, games, music, and images available for fast direct download + torrents.
 
 
-#### TV
+### TV
 
 - [WatchSeries](http://dwatchseries.to/) TV series, multiple links/backups to different streaming hosts
 - [TVBox](https://tvbox.ag/) TV/Movies, easy to navigate site, multiple links/backups to different streaming hosts
 
 
-#### Anime
+### Anime
 
 - [Nyaa](https://nyaa.si/) BitTorrent software for cats [(Repo)](https://github.com/nyaadevs/nyaa)
 - [Hi10 Anime](https://hi10anime.com/) High-Quality 10-bit Anime Encodes
@@ -839,7 +980,7 @@ premium services
 - [Aniyomi](https://github.com/aniyomiorg/aniyomi) Aniyomi is a video player and image viewer for Android 6.0 and above. Focused on anime and manga.
 
 
-#### Cartoons
+### Cartoons
 
 - [KissCartoon](https://kisscartoon.nz/) Popular cartoon streaming site
 - [WCOForever.org](https://www.wcoforever.org/) Cartoons, dubbed/subbed anime streaming site
@@ -847,7 +988,7 @@ premium services
 - [KimCartoon](https://kimcartoon.li/) Large cartoon collection, primarily Openload
 
 
-#### Sports Streaming
+### Sports Streaming
 
 - [/r/MLBstreams](https://www.reddit.com/r/MLBstreams/) Reddit - MLB streams
 - [/r/NHLstreams](https://www.reddit.com/r/NHLstreams/) Reddit - NHL streams
@@ -866,7 +1007,7 @@ premium services
 - [NFLStreams](https://nflstreams.me/) The Ultimate Guide to Watching Live NFL Streams Online.
 
 
-#### Specialty Sites
+### Specialty Sites
 
 - [Einthusan](https://einthusan.tv/intro/) Foreign
 - [Dramago](http://www.dramago.com/) Drama movies/series
@@ -883,7 +1024,7 @@ premium services
 - [Archive.org](https://archive.org/) Old movies
 
 
-#### Third Party Hosts
+### Third Party Hosts
 
 - [MovieZion](https://www.nicemoviezion.pro/) Openload
 - [Vmovee](https://vmovee.me/) Openload (Many outdated/removed links, not updated)
@@ -919,6 +1060,18 @@ premium services
 
 ## Media Centre Applications
 
+((Intro))
+**Media Center Applications** are software platforms designed to manage and play media content from a single interface. These applications allow users to organize and access their collection of videos, music, and photos from various sources, including local storage, network-attached storage (NAS), and online streaming services. Here are the main features of media center applications:
+
+- **Unified Media Library:** Centralizes all media content into one easy-to-navigate interface, offering sorting and tagging features for better organization.
+- **Playback Compatibility:** Supports a wide range of media formats and codecs, enabling seamless playback across devices.
+- **Streaming Integration:** Often integrates with various streaming services, allowing users to access and manage both local and online content simultaneously.
+- **Customization and Extensions:** Many media center applications can be customized with skins, plugins, and extensions to enhance functionality or interface aesthetics.
+- **Remote Access and Control:** Provides options for remote access and control, which can turn any compatible device into a media control hub.
+
+Media center applications are ideal for users looking to create a comprehensive and immersive home entertainment system, simplifying the management and enjoyment of their media collections.
+((Intro))
+
 - [Plex](https://www.plex.tv/) !star2! Your content—from live and recorded TV and personal media, to on-demand web shows, video news, and podcasts—beautifully organized and ready to stream everywhere.
 - [Emby](https://emby.media/) a personal media server with apps on just about every device.
 - [Kodi](https://kodi.tv/) an award-winning free and open-source home theater/media center software and entertainment hub for digital media.
@@ -937,6 +1090,18 @@ premium services
 
 ## Stremio
 
+((Intro))
+**Stremio** is a modern media center application that aggregates content from various sources, allowing users to watch movies, series, live TV, and videos from different providers. It simplifies the streaming experience by bringing all your favorite content to one place. Here are the main features of Stremio:
+
+- **Content Aggregation:** Gathers streams from various sources including official streaming services and community-hosted links through add-ons.
+- **Cross-Platform Support:** Available on multiple devices such as Windows, MacOS, Linux, Android, and iOS.
+- **Add-ons System:** Allows for the installation of add-ons directly in the app, enhancing functionality and content availability without compromising security.
+- **Personalized Recommendations:** Offers content recommendations based on your viewing history, improving content discovery.
+- **Organized Library Management:** Keeps track of what you watch, notifies you when a new episode or movie is available, and organizes your collections and playlists.
+
+Stremio's user-friendly interface and robust add-on ecosystem make it an attractive choice for users seeking a centralized solution to manage and enjoy diverse multimedia content.
+((Intro))
+
 - [r/StremioAddons](https://www.reddit.com/r/StremioAddons/) Discussion and links pertaining to unofficial add-ons for Stremio
 - [A complete curated list of all working Stremio Add-ons](https://www.reddit.com/r/StremioAddons/comments/ahd6gk/sticky_stremio_addons_list/)
 - [PimpMyStremio](https://github.com/sungshon/PimpMyStremio) Local add-on manager for Stremio add-ons, adds tens of new (self-hosted, and much more powerful) add-ons to Stremio
@@ -947,6 +1112,19 @@ premium services
 
 
 ## Plex
+
+((Intro))
+**Plex** is a powerful media server software that organizes video, music, and photos from personal media libraries and streams them to devices. Plex turns your stored media into a streamed experience similar to online streaming services. Here are the key features of Plex:
+
+- **Cross-Platform Support:** Available on multiple devices such as Windows, MacOS, Linux, Android, and iOS.
+- **Media Organization:** Automatically sorts and catalogs media files into an intuitive interface, complete with artwork, descriptions, and metadata.
+- **Live TV and DVR:** Offers Live TV and DVR capabilities, allowing you to watch and record broadcast TV, complete with support for electronic program guides.
+- **Remote Access:** Enables secure access to your media library from any location via the internet, on almost any device.
+- **Plex Pass:** A premium subscription that offers additional features such as offline viewing, enhanced music and photo services, and more.
+- **Compatibility:** Supports a wide range of devices, including computers, smartphones, tablets, gaming consoles, and smart TVs.
+
+Plex is ideal for those looking to harness the power of their own media library, providing a sleek interface and a rich set of features that enhance the media viewing experience at home and on the go.
+((Intro))
 
 - [linuxserver/docker-plex](https://github.com/linuxserver/docker-plex) LinuxServer.io Plex Media Server docker image
 - [plexinc/pms-docker](https://github.com/plexinc/pms-docker) official Plex docker image
@@ -1047,6 +1225,18 @@ premium services
 
 ## Kodi
 
+((Intro))
+**Kodi** is an open-source media player and entertainment hub that allows users to stream multimedia content from various sources. Originally developed for the Xbox console, it is now available on multiple platforms, including Windows, MacOS, Linux, Android, and iOS. Key features of Kodi include:
+
+- **Extensive Customization:** Supports a wide range of skins and builds to customize the user interface.
+- **Add-ons:** A vast library of community-created add-ons that enhance functionality, offering access to streaming services, music, and videos.
+- **Library Management:** Automatically scans and organizes your media files, providing detailed descriptions, artwork, and metadata.
+- **Versatility:** Compatible with a variety of devices, from desktop computers to smartphones and dedicated media boxes.
+- **Live TV and PVR:** Supports live streaming and PVR (Personal Video Recorder) capabilities for watching and recording live TV.
+
+Kodi serves as a comprehensive solution for personal media, appealing to those who desire a customizable and versatile media center.
+((Intro))
+
 - [/r/Addons4Kodi](https://www.reddit.com/r/addons4kodi) Discussion and links pertaining to unofficial add-ons for Kodi Media Center
 - [Seren](https://www.reddit.com/r/Addons4Kodi/comments/dt4kg2/recommended_addons_november_2019/f6ukyfr?utm_source=share&utm_medium=web2x) !star2! Streaming addon which works with Premiumize and Real-Debrid to stream torrents with the appropriate provider package instantly, and behaves similarly to Netflix, with autoplay and Up Next integration
 - [Recommended Addons - November 2019](https://www.reddit.com/r/Addons4Kodi/comments/dt4kg2/recommended_addons_november_2019/) Latest working Kodi addons compiled into one place
@@ -1069,6 +1259,18 @@ premium services
 
 
 ## Gaming
+
+((Intro))
+**Game Download Sites and Tools** provide gamers with platforms to purchase, download, and manage video games. These tools range from big digital distribution platforms to community-driven sites offering indie games. Features and benefits include:
+
+- **Wide Selection:** Access to a vast array of games, from blockbuster titles to indie gems.
+- **Convenient Access:** Instant downloads directly to gaming consoles, computers, or mobile devices.
+- **Regular Updates:** Automatic game updates and patches that keep games current without manual intervention.
+- **Preserve Old Games** So many Games are gone already, do your part and preserve them.
+
+These platforms have transformed how gamers acquire and enjoy their games, offering both convenience and a rich selection of playable content.
+((Intro))
+
 
 - [/r/CrackWatch](https://reddit.com/r/CrackWatch/) !star2! New video game crack releases are posted here
 - [Beginners Guide to Crack Watch](https://web.archive.org/web/20181219142135/https://www.reddit.com/r/CrackWatch/comments/a7l141/crack_watch_beginners_guide_to_crack_watch/) Reddit post by /u/EssenseOfMagic
@@ -1137,6 +1339,18 @@ premium services
 
 ## Music
 
+((Intro))
+**Music Download Sites and Tools** are platforms that allow users to download music. These range from comprehensive online music stores to apps designed for managing music purchases and downloads. Key advantages include:
+
+- **Extensive Music Libraries:** Offer vast collections of songs across various genres and eras.
+- **High-Quality Audio:** Many sites provide high-resolution audio formats for superior sound quality.
+- **Ease of Use:** Simplified interfaces for quick searching, listening, and downloading of music.
+- **Ownership:** Unlike streaming, downloading music means you own the files and can play them anytime, offline and without restrictions.
+
+Music download sites and tools cater to audiophiles and casual listeners alike, providing a **offline** and **permanent** way to enjoy music.
+((Intro))
+
+
 - [MOOVAL](https://www.mooval.de/) Easily move your playlists, tracks, and likes from one streaming service to another.
 - [Madsonic](https://www.madsonic.org/) Madsonic is a web-based media library and media streamer with jukebox functionality.
 - [MusicBrainz](https://musicbrainz.org/) MusicBrainz is an open music encyclopedia that collects music metadata and makes it available to the public.
@@ -1186,6 +1400,24 @@ premium services
 - [How to Remove DRM From iTunes Movies and TV Shows](https://www.howtogeek.com/291612/how-to-remove-drm-from-itunes-movies-and-tv-shows/) HowToGeek article on how to use TunesKit and Requiem
 - [Plus Premieres](https://www.pluspremieres.eu/) Download newest iTunes music in M4A format
 - [forked-daapd](https://ejurgensen.github.io/forked-daapd/) Linux/FreeBSD DAAP (iTunes) and MPD media server with support for AirPlay devices (multiroom), Apple Remote (and compatibles), Chromecast, Spotify and internet radio.
+
+
+### Audiobooks
+
+- Servers:
+    - [Booksonic](http://booksonic.org/) Booksonic is a server and an app for streaming your audiobooks to any PC or Android phone.
+    - [AudioBookShelf](https://www.audiobookshelf.org/) Audiobookshelf is a self-hosted audiobook and podcast server.
+    - [Kavita](https://www.kavitareader.com/) Kavita is a fast, feature rich, cross platform reading server.
+ 
+- Downloads:
+    - [AudioBook Bay](https://audiobookbay.li/) Download unabridged audiobooks for free or share your audiobooks, safe, fast and high quality.
+    - [AudioBB.com](https://audiobb.com/) Free audiobook downloads.
+    - [The Eye /public/AudioBooks](http://the-eye.eu/public/AudioBooks/) A few publicly accessible audiobooks hosted by The Eye.
+
+- Other:
+    - [AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) Convert Audible's .aax filetype to MP3, FLAC, M4A, or OPUS.
+    - [Tokybook](https://tokybook.com/) Free audiobook streaming site.
+    - [ZAudioBooks.com](https://zaudiobooks.com/) Free audiobook streaming site.
 
 
 ## Software
@@ -1301,25 +1533,6 @@ premium services
 - [TutSala](https://tutsala.com/tutorials/)
 - [TutsNode](https://tutsnode.net/)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) Download videos from LinkedIn Learning, PluralSight, Udemy etc.
-
-
-## Audiobooks
-
-- Servers:
-    - [Booksonic](http://booksonic.org/) Booksonic is a server and an app for streaming your audiobooks to any PC or Android phone.
-    - [AudioBookShelf](https://www.audiobookshelf.org/) Audiobookshelf is a self-hosted audiobook and podcast server.
-    - [Kavita](https://www.kavitareader.com/) Kavita is a fast, feature rich, cross platform reading server.
- 
-- Downloads:
-    - [AudioBook Bay](https://audiobookbay.li/) Download unabridged audiobooks for free or share your audiobooks, safe, fast and high quality.
-    - [AudioBB.com](https://audiobb.com/) Free audiobook downloads.
-    - [The Eye /public/AudioBooks](http://the-eye.eu/public/AudioBooks/) A few publicly accessible audiobooks hosted by The Eye.
-
-- Other:
-    - [AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) Convert Audible's .aax filetype to MP3, FLAC, M4A, or OPUS.
-    - [Tokybook](https://tokybook.com/) Free audiobook streaming site.
-    - [ZAudioBooks.com](https://zaudiobooks.com/) Free audiobook streaming site.
-
 
 ## Comicbooks
 

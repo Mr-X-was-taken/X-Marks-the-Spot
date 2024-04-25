@@ -364,6 +364,8 @@ toggleBackgroundButton.click();
 var video = document.getElementById("Clouds");
 video.playbackRate = 0.4;
 
+  //  Checkboxes
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get the checkboxes
   var checkbox1 = document.getElementById("check1");
@@ -435,9 +437,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let currentCategory = null;
     let currentSubCategory = null;
     let currentSubSubCategory = null;
+    let inIntro = false; // Flag to track when we are within an intro section
 
     lines.forEach((line) => {
-      if (line.startsWith("## ")) {
+      if (line.startsWith("((Intro))")) {
+        // Toggle the inIntro flag when encountering an intro delimiter
+        inIntro = !inIntro;
+        if (inIntro && currentCategory) {
+          // Initialize intro content for a category
+          currentCategory.intro = "";
+        }
+      } else if (inIntro && currentCategory) {
+        // Append line to intro if we are inside an intro section and inside a category
+        currentCategory.intro += line + "\n";
+      } else if (line.startsWith("## ")) {
         // Detects category
         const title = line.substring(3).trim();
         currentCategory = { title, subCategories: [] };
@@ -485,6 +498,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
     console.log(categories); // Log the categories
   }
+
 
   // Now, outside the parseMarkdown function, fetch the markdown content
   fetch("links.md") // Make sure the path to 'links.md' is correct
@@ -836,19 +850,31 @@ function populateEntries() {
 
 
 function populateFromMarkdown() {
-  // Clear previous entries
+  const contentWrapper = document.querySelector(".content-wrapper"); 
   const ul = document.querySelector(".content-section ul") || document.createElement("ul");
   const tilesContainer = document.getElementById("Tiles2");
-  //ul.innerHTML = ''; // Reset the list
-  //tilesContainer.innerHTML = ''; // Reset the tiles
+
 
   // Ensure containers are properly attached
   if (!document.querySelector(".content-section ul")) {
       document.querySelector(".content-section").appendChild(ul);
   }
 
-  // Iterate through all items in all categories
   categories.forEach(category => {
+      // Display the intro for each category, if it exists
+      if (category.intro) {
+          const introSection = document.createElement("div");
+          introSection.className = "category-intro";
+
+          // Create a div specifically for the intro text
+          const introText = document.createElement("div");
+          introText.className = "intro-text";
+          introText.innerHTML = `<h2>${category.title}</h2><p>${markdownToHTML(category.intro)}</p>`;
+
+          introSection.appendChild(introText);
+          contentWrapper.appendChild(introSection); // Append intro directly to the content-wrapper
+      }
+
       category.subCategories.forEach(subCategory => {
           (subCategory.subSubCategories || []).forEach(subSubCategory => {
               subSubCategory.items.forEach(item => createEntries(item));
@@ -863,17 +889,12 @@ function populateFromMarkdown() {
   });
 
   function createEntries(item) {
-      // Create list entry
       var listEntry = document.createElement("li");
-      if (item.starred) {
-        listEntry.classList.add("list-website", "starred");
-    } else {
-      listEntry.classList.add("list-website");
-    }
+      listEntry.className = item.starred ? "list-website starred" : "list-website";
       listEntry.innerHTML = `
           <div class="website-list">
               <button class="fa-regular fa-pen-to-square" style="color: #009595;"></button>
-              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}"style="min-width: 32px;">
+              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}" style="min-width: 32px;">
               <span class="website-name">${item.name}</span>
           </div>
           <div class="button-wrapper">
@@ -886,17 +907,12 @@ function populateFromMarkdown() {
       `;
       ul.appendChild(listEntry);
 
-      // Create card entry
       var cardEntry = document.createElement("div");
-      if (item.starred) {
-        cardEntry.classList.add("app-card", "starred");
-    } else {
-        cardEntry.classList.add("app-card");
-    }
+      cardEntry.className = item.starred ? "app-card starred" : "app-card";
       cardEntry.innerHTML = `
           <span>
               <button class="fa-regular fa-pen-to-square" style="color: #009595;"></button>
-              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}"style="min-width: 32px;">
+              <img src="https://www.google.com/s2/favicons?sz=32&domain=${item.link}" alt="${item.link}" style="min-width: 32px;">
               <div class="text-center">${item.name}</div>
               <div class="buttonHolder">
                   <button class="starbutton2"></button>
@@ -909,3 +925,15 @@ function populateFromMarkdown() {
   }
 }
 
+function markdownToHTML(text) {
+  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2">$1</a>');
+  text = text.replace(/^- (.*)/gm, '<li class="intro-li">$1</li>').replace(/<li class="intro-li">.*?<\/li>/g, match => `<ul class="intro-ul">${match}</ul>`);
+  text = text.split('\n').map(line => line.trim()).join('</p><p>');
+  if (!text.includes('<ul class="intro-ul">')) {
+      text = `<p>${text}</p>`;
+  }
+  text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  text = text.replace(/<p><\/p>/g, '');
+  return text;
+}

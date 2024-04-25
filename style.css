@@ -47,7 +47,7 @@
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  scrollbar-width: thin;
+  scrollbar-width:thin;
   scrollbar-color: var(--scrollbar-bg) transparent; /* Thumb and track */
 }
 
@@ -387,7 +387,7 @@ body.light-mode:before {
 .left-side {
   border-right: 1px solid var(--border-color);
   padding: 26px;
-  overflow: scroll;
+  overflow-y: scroll;
   max-width: min-content;
 }
 
@@ -589,7 +589,7 @@ a.sub-sub-header-link:hover {
   color: var(--theme-color);
   padding: 20px 40px;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: var(--theme-bg-color);
 }
 @media screen and (max-width: 510px) {
@@ -1536,3 +1536,30 @@ button.fa-solid{
  }
 
  
+ .category-intro {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  border-radius: 8px;
+  max-width: 100%;
+  white-space: wrap;
+  background-color: var(--theme-bg-color);
+}
+
+.intro-text {
+  font-size: 16px;
+  color: var(--theme-color);
+}
+
+.intro-text h2 {
+  color: #009595;
+  margin-bottom: 8px;
+}
+
+.intro-text p {
+  line-height: 1.5;
+}
+
+ #intro-list{
+  line-height: 1.5;
+}
